@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Combobox, Transition } from '@headlessui/react';
 import { SearchManufacturerProps } from '@/types'
 import { manufacturers } from '@/constants';
-// import { relative } from 'path';
 
 const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacturerProps) => {
     const [query, setQuery] = useState('');
@@ -52,7 +51,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
                                 value={query}
                                 className="sear ch-manufacturer__option"
                             >
-                                Create "{query}"
+                                Create &quot;query&quot;
 
                             </Combobox.Option>
                         ) : (

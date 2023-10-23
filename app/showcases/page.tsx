@@ -32,8 +32,8 @@ const ShowPage = async () => {
           {!isDataEmpty ? (
             <section>
               <div className="container">
-                {allCars?.map((car) => (
-                  <CarCard car={car} />
+                {allCars?.map((car, index) => (
+                  <CarCard key={index}car={car} />
                 ))}
               </div>
             </section>

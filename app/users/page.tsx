@@ -11,22 +11,25 @@ const UsersPage = async() => {
     const users: User[] = await rest.json();
   
   return (
-    <>
-    <h1 className='bg-sky-400'>Users</h1>
-    <table className='border-separate border-spacing-2 border border-slate-500'>
-      <thead>
-        <tr>
-          <th className='border border-slate-600'>Name</th>
-          <th className='border border-slate-600'>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        {users.map(user => <tr key={user.id}>
-          <td>{user.name}</td>
-          <td>{user.email}</td></tr>)}
-      </tbody>
-    </table>
-    </>
+    <main className="overflow-hidden">
+      <div className="mt-12 padding-x padding-y max-width" id="discover">
+        <h1 className="font-bold">Users</h1>
+        <table className='border-separate border-spacing-3 border-2 border-slate-500'>
+          <thead>
+            <tr>
+              <th className='border border-slate-600'>Name</th>
+              <th className='border border-slate-600'>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map(user => <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.email}</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+    
+    </main>
   )
 }
 

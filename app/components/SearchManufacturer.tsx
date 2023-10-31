@@ -17,20 +17,20 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
         ));
 
     return (
-    <div className="search-manufacturer">
+    <div className="search-manufacturer  rounded-full">
         <Combobox>
             <div className="relative w-ful">
                 <Combobox.Button className="absolute top-[14px]">
                     <Image
-                        src="/next.svg"
-                        width={40}
-                        height={40}
+                        src="/icons8-search.svg"
+                        width={20}
+                        height={20}
                         className="ml-4"
                         alt="car logo"
                     />
                 </Combobox.Button>
                 <Combobox.Input 
-                    className="search-manufacturer__input bg-gray-200"
+                    className="search-manufacturer__input bg-[#F8F0DF]"
                     placeholder="isianhayooo"
                     displayValue={(manufacturer: string) => manufacturer}
                     onChange={(e) => setQuery(e.target.value)}
@@ -49,7 +49,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
                         query !== "" ? (
                             <Combobox.Option
                                 value={query}
-                                className="sear ch-manufacturer__option"
+                                className="search-manufacturer__option"
                             >
                                 Create &quot;query&quot;
 

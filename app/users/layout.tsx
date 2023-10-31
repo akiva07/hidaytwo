@@ -1,5 +1,5 @@
 import { Footer, Navbar } from '@/app/components'
-import './globals.css'
+import '../globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -17,10 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative">
-        {/* <Navbar />  */}
+      <body className="relative bg-[#F7F6F2]">
+        <Navbar /> 
         {children}
-        {/* <Footer /> */}
+        <Footer />
        </body>
     </html>
   )

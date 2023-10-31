@@ -15,10 +15,10 @@ const CarCard = ({car}: CarCardProps) => {
 
     const [isOpen, setIsOpen] = useState(false);
     return (
-    <div className="flex w-full bg-slate-200">
+    <div className="car-card group">
     
         <div className="car-card__content">
-            <h2>
+            <h2 className="car-card__content-title">
                 {make} {model}
             </h2>
         </div>   
@@ -27,7 +27,7 @@ const CarCard = ({car}: CarCardProps) => {
             <span className="self-start text-[14px] font-semibold">
                 Rp
             </span>
-            300.000,-
+            45.000,-
             <span className="self-end text-[14px] font-medium">
                 /day
             </span>
@@ -57,7 +57,7 @@ const CarCard = ({car}: CarCardProps) => {
                 </div>
             </div>
 
-            <div className="car-card">
+            <div className="car-card__btn-container">
                 <CustomButton 
                     title="View More"
                     containerStyles="w-full py-[14px]
